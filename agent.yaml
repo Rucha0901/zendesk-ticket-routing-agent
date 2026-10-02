@@ -1,0 +1,30 @@
+spec_version: "0.1.0"
+name: zendesk-ticket-routing-agent
+version: 1.0.0
+description: Customer support ticket sentiment classification, urgent sla breach prediction, and skills-based agent routing.
+author: "Rucha Salpure"
+license: MIT
+model:
+  preferred: claude-opus-4-6
+  fallback:
+    - claude-sonnet-4-5-20250929
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+skills:
+  - skills-based-agent-matching
+tools: []
+delegation:
+  mode: auto
+runtime:
+  max_turns: 50
+  timeout: 300
+compliance:
+  risk_tier: standard
+  frameworks: []
+tags:
+  - customer-support
+  - autonomous-agent
+  - opengap-verified
+metadata:
+  repository: "https://github.com/Rucha0901/zendesk-ticket-routing-agent"
